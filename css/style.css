@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=Dancing+Script:wght@400;500;600;700&family=Grape+Nuts&display=swap');
+
+:root{
+    color-scheme: light only;
+}
+.loader{
+    position: fixed;
+    z-index: 999999;
+    background: black;
+    width: 100%;
+    height: 100%;
+}
+
+.loader .blocks{
+    position: absolute;
+    margin-top: 15%;
+    width: 8px;
+    height: 25px;
+    background: #050c09;
+    left: 50%;
+    transform: rotate(calc(18deg * var(--i)));
+    transform-origin: 0 125px;
+    animation: animateLoad 2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    min-height: 100vh;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-image: url("/images/heart_bg.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    overflow: hidden;
+}
+/* .glow::after{
+    margin: 5%;
+    content:'';
+    position: absolute;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    animation: animate 5s linear infinite;
+    width: calc(100%);
+    height: calc(100%);
+} */
+.main{
+    float: left;
+    width: 100%;
+    margin-top: 15rem;
+}
+.main p{
+    font-family: 'Grape Nuts', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+.textDisplay{
+    height: fit-content;
+}
+#clickMe{
+    margin-top: 0%;
+    font-size: 6.5rem;
+}
+.message{
+    position: relative;
+    margin-left: 25%;
+    margin-right: 25%;
+    line-height: 3.125rem;
+    font-weight: bold;
+    color: #000;
+}
+.message p{
+    -webkit-animation: fadeIn 1.5s ease-in-out;
+    -moz-animation: fadeIn 1.5s ease-in-out;
+    -o-animation: fadeIn 1.5s ease-in-out;
+    -ms-animation: fadeIn 1.5s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
+.message p:nth-child(2){
+    margin-top: 5%;
+    font-size: 8.125rem;
+    line-height: 8.75rem;
+}
+.message p:nth-child(3){
+    margin-top: 5%;
+    font-size: 4.688rem;
+    line-height: 6.25rem;
+}
+.message p:nth-child(4){
+    margin-top: 10%;
+    font-size: 4.375rem;
+    line-height: 6.25rem;
+}
+.message p:nth-child(5){
+    margin-top: 10%;
+    font-size: 4.375rem;
+    line-height: 6.25rem;
+}
+.message p:nth-child(6){
+    margin-top: 10%;
+    font-size: 4.9rem;
+    line-height: 6.5rem;
+}
+.message p:nth-child(7){
+    margin-top: 10%;
+    font-size: 3.8rem;
+    line-height: 6.25rem;
+    font-weight: bolder;
+}
+.message p:nth-child(8){
+    margin-top: 10%;
+    font-size: 4.375rem;
+    line-height: 6.25rem;
+}
+.message p:nth-child(9){
+    margin-top: 5%;
+    font-size: 3.5rem;
+    line-height: 4rem;
+}
+.message p:nth-child(10){
+    margin-top: 10%;
+    font-size: 4rem;
+    line-height: 5rem;
+}
+.message p:nth-child(11){
+    margin-top: 10%;
+    font-size: 5.3rem;
+    line-height: 6.5rem;
+}
+.message p:nth-child(12){
+    margin-top: 10%;
+    font-size: 4.5rem;
+    line-height: 6.5rem;
+}
+.message p:nth-child(13){
+    margin-top: 5%;
+    font-size: 4.063rem;
+    line-height: 5rem;
+}
+.message p:nth-child(14){
+    margin-top: 5%;
+    font-size: 3.6rem;
+    line-height: 5rem;
+}
+.message p:nth-child(15){
+    margin-top: 10%;
+    font-size: 4rem;
+    line-height: 6.5rem;
+}
+.message p:nth-child(16){
+    margin-top: 10%;
+    font-size: 4rem;
+    line-height: 5.5rem;
+}
+.message p:nth-child(17){
+    margin-top: 10%;
+    font-size: 4rem;
+    line-height: 5.5rem;
+}
+.message p:nth-child(18){
+    margin-top: 25%;
+    font-size: 7rem;
+    line-height: 8.75rem;
+}
+.backButton img{
+    float: left;
+    margin-left: 30%;
+    height: 8rem;
+    transform: rotate(180deg);
+    display: none;
+    cursor: pointer;
+}
+.nextButton img{
+    margin-top: 5%;
+    margin-top: 2%;
+    margin-left: 45%;
+    height: 8rem;
+    cursor: pointer;
+}
+.vidArea{
+    margin-left: -5%;
+}
+#videoFrame{
+    width: 750px; 
+    height: 550px;
+}
+
+@media all and (max-width: 480px){
+:root{
+    color-scheme: light only;
+}
+    .loader{
+        position: fixed;
+        z-index: 999999;
+        background: black;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .loader .blocks{
+        position: absolute;
+        margin-top: 55%;
+        width: 8px;
+        height: 25px;
+        background: #050c09;
+        left: 50%;
+        transform: rotate(calc(18deg * var(--i)));
+        transform-origin: 0 125px;
+        animation: animateLoad 2s ease-in-out infinite;
+        animation-delay: calc(0.1s * var(--i));
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html, body {
+        min-height: 100vh;
+    }
+    body{
+        height: 100%;
+        width: 100%;
+        background-image: url("/images/heart_bg_m.jpg");
+        background-color: white;
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+    .main{
+        float: left;
+        width: 100%;
+        margin-top: 15rem;
+    }
+    .main p{
+        font-family: 'Grape Nuts', cursive;
+        font-size: 40px;
+        text-align: center;
+    }
+    .textDisplay{
+        height: fit-content;
+    }
+    #clickMe{
+        margin-top: 15%;
+        font-size: 5rem;
+        line-height: 4rem;
+    }
+    .message{
+        position: relative;
+        margin-left: 25%;
+        margin-right: 25%;
+        line-height: 3.125rem;
+        font-weight: bold;
+        color: #000;
+    }
+    .message p{
+        -webkit-animation: fadeIn 1.5s ease-in-out;
+        -moz-animation: fadeIn 1.5s ease-in-out;
+        -o-animation: fadeIn 1.5s ease-in-out;
+        -ms-animation: fadeIn 1.5s ease-in-out;
+        animation: fadeIn 1.5s ease-in-out;
+    }
+    .message p:nth-child(2){
+        margin-top: 90%;
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
+    .message p:nth-child(3){
+        margin-top: 90%;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    .message p:nth-child(4){
+        margin-top: 90%;
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+    .message p:nth-child(5){
+        margin-top: 90%;
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
+    .message p:nth-child(6){
+        margin-top: 90%;
+        font-size: 2.3rem;
+        line-height: 3rem;
+    }
+    .message p:nth-child(7){
+        margin-top: 90%;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        font-weight: bold;
+    }
+    .message p:nth-child(8){
+        margin-top: 90%;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        font-weight: bold;
+    }
+    .message p:nth-child(9){
+        margin-top: 85%;
+        font-size: 1.32rem;
+        line-height: 2rem;
+        font-weight: bold;
+    }
+    .message p:nth-child(10){
+        margin-top: 90%;
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    .message p:nth-child(11){
+        margin-top: 90%;
+        font-size: 2.3rem;
+        line-height: 2.5rem;
+    }
+    .message p:nth-child(12){
+        margin-top: 90%;
+        font-size: 2.1rem;
+        line-height: 3rem;
+    }
+    .message p:nth-child(13){
+        margin-top: 85%;
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        font-weight: bolder;
+    }
+    .message p:nth-child(14){
+        margin-top: 90%;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        font-weight: bolder;
+    }
+    .message p:nth-child(15){
+        margin-top: 90%;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        font-weight: bolder;
+    }
+    .message p:nth-child(16){
+        margin-top: 85%;
+        font-size: 1.7rem;
+        line-height: 2.3rem;
+    }
+    .message p:nth-child(17){
+        margin-top: 85%;
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+    }
+    .message p:nth-child(18){
+        margin-top: 90%;
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+    }
+    .backButton img{
+        float: left;
+        margin-left: 20%;
+        height: 5rem;
+        transform: rotate(180deg);
+        display: none;
+        cursor: pointer;
+    }
+    .nextButton img{
+        margin-top: 3%;
+        margin-left: 40%;
+        height: 5rem;
+        cursor: pointer;
+    }
+    #videoFrame{
+        margin-top: 90%;
+        margin-left: -15%;
+        width: 300px; 
+        height: 200px;
+    }
+}
+
+@keyframes animate {
+    0%,100%{
+        filter:hue-rotate(0deg);
+    }50%{
+        filter:hue-rotate(360deg);
+    }
+}
+
+@keyframes animateLoad {
+    0%,50%{
+        background: #050c09;
+        box-shadow: none;
+    }
+    50.1%,100%{
+        background: #FF69B4;
+        box-shadow: 0 0 5px #FF69B4;
+        box-shadow: 0 0 15px #FF69B4;
+        box-shadow: 0 0 30px #FF69B4;
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeIn {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadeIn {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@-o-keyframes fadeIn {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+  
+@-ms-keyframes fadeIn {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
